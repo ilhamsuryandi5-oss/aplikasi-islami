@@ -1,0 +1,141 @@
+let audio = new Audio();
+let currentBtn = null;
+
+const container = document.querySelector(".container");
+const search = document.getElementById("search");
+
+/* ======================
+   LOAD SURAH
+====================== */
+function loadSurah() {
+  search.style.display = "block";
+
+  fetch("data/surah.json")
+    .then(res => res.json())
+    .then(data => {
+      renderSurah(data);
+    });
+}
+
+function renderSurah(data) {
+  container.innerHTML = "";
+
+  data.forEach(surah => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <div class="surah-name">${surah.nama}</div>
+      <div class="surah-arab">${surah.arab}</div>
+      <div class="surah-arti">${surah.arti}</div>
+      <button class="play-btn" onclick="playAudio('${surah.audio}', this)">
+        ▶️ Putar Murotal
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+
+  aktifkanSearch();
+}
+
+/* ======================
+   AUDIO
+====================== */
+function playAudio(src, btn) {
+  if (audio.src.includes(src)) {
+    audio.pause();
+    audio.src = "";
+    btn.innerText = "▶️ Putar Murotal";
+    return;
+  }
+
+  if (currentBtn) {
+    currentBtn.innerText = "▶️ Putar Murotal";
+  }
+
+  audio.src = src;
+  audio.play();
+  btn.innerText = "⏸️ Pause";
+  currentBtn = btn;
+}
+
+/* ======================
+   SEARCH SURAH
+====================== */
+function aktifkanSearch() {
+  search.oninput = function () {
+    const keyword = this.value.toLowerCase();
+    document.querySelectorAll(".card").forEach(card => {
+      const name = card.querySelector(".surah-name").innerText.toLowerCase();
+      card.style.display = name.includes(keyword) ? "block" : "none";
+    });
+  };
+}
+
+/* ======================
+   LOAD DZIKIR
+====================== */
+function loadDzikir() {
+  search.style.display = "none";
+
+  fetch("data/dzikir.json")
+    .then(res => res.json())
+    .then(data => {
+      renderSimple(data);
+    });
+}
+
+/* ======================
+   LOAD DOA
+====================== */
+function loadDoa() {
+  search.style.display = "none";
+
+  fetch("data/doa.json")
+    .then(res => res.json())
+    .then(data => {
+      renderSimple(data);
+    });
+}
+
+/* ======================
+   RENDER DZIKIR & DOA
+====================== */
+function renderSimple(data) {
+  container.innerHTML = "";
+
+  data.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <div class="surah-name">${item.judul}</div>
+      <div class="surah-arab">${item.arab}</div>
+      <div class="surah-arti">${item.arti}</div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+/* ======================
+   LOAD SHOLAT (SEMENTARA)
+====================== */
+function loadSholat() {
+  search.style.display = "none";
+
+  container.innerHTML = `
+    <div class="card">
+      <div class="surah-name">🕌 Jadwal Sholat</div>
+      <div class="surah-arti">
+        Fitur jadwal sholat & adzan Aceh akan aktif di tahap berikutnya.
+      </div>
+    </div>
+  `;
+}
+
+/* ======================
+   LOAD DEFAULT
+====================== */
+loadSurah();

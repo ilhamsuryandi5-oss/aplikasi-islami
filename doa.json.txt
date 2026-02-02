@@ -1,0 +1,12 @@
+[
+  {
+    "judul": "Doa Sebelum Makan",
+    "arab": "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا",
+    "arti": "Ya Allah, berkahilah rezeki yang Engkau berikan kepada kami."
+  },
+  {
+    "judul": "Doa Sesudah Makan",
+    "arab": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا",
+    "arti": "Segala puji bagi Allah yang telah memberi kami makan."
+  }
+]

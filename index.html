@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikasi Islami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="title">🕌 Aplikasi Islami</div>
+    <div class="subtitle">Surah · Dzikir · Doa · Sholat</div>
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu">
+    <button onclick="loadSurah()">📖 Surah</button>
+    <button onclick="loadDzikir()">📿 Dzikir</button>
+    <button onclick="loadDoa()">🤲 Doa</button>
+    <button onclick="loadSholat()">🕌 Sholat</button>
+  </nav>
+
+  <!-- SEARCH (khusus surah) -->
+  <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="Cari surah..."
+  >
+
+  <!-- KONTEN -->
+  <main class="container"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>

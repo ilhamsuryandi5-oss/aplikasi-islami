@@ -1,0 +1,12 @@
+[
+  {
+    "judul": "Dzikir Pagi",
+    "arab": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ",
+    "arti": "Kami telah memasuki waktu pagi dan kerajaan hanya milik Allah."
+  },
+  {
+    "judul": "Dzikir Petang",
+    "arab": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ",
+    "arti": "Kami telah memasuki waktu petang dan kerajaan hanya milik Allah."
+  }
+]

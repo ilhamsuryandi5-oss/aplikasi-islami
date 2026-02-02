@@ -1,0 +1,38 @@
+[
+  {
+    "nama": "Al-Fatihah",
+    "arab": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "arti": "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.",
+    "audio": "audio/alfatihah.mp3"
+  },
+  {
+    "nama": "Al-Ikhlas",
+    "arab": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+    "arti": "Katakanlah (Muhammad), Dialah Allah Yang Maha Esa.",
+    "audio": "audio/alikhlas.mp3"
+  },
+  {
+    "nama": "Al-Falaq",
+    "arab": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+    "arti": "Katakanlah, aku berlindung kepada Tuhan yang menguasai subuh.",
+    "audio": "audio/alfalaq.mp3"
+  },
+  {
+    "nama": "An-Nas",
+    "arab": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+    "arti": "Katakanlah, aku berlindung kepada Tuhan manusia.",
+    "audio": "audio/annas.mp3"
+  },
+  {
+    "nama": "Al-Kautsar",
+    "arab": "إِنَّا أَعْطَيْنَاكَ ٱلْكَوْثَرَ",
+    "arti": "Sesungguhnya Kami telah memberimu nikmat yang banyak.",
+    "audio": "audio/alkautsar.mp3"
+  },
+  {
+    "nama": "Al-'Ashr",
+    "arab": "وَٱلْعَصْرِ",
+    "arti": "Demi masa.",
+    "audio": "audio/alasr.mp3"
+  }
+]
